@@ -69,14 +69,10 @@ public class Main {
         System.out.println(customerService.findById(idToFind));
 
         System.out.println("=====Find By Name model.Customer====");
-        List<Customer> customersByName;
-        System.out.println("Input Name: ");
-        input.nextLine();
-        String nameToFind = input.nextLine();
-        customersByName = customerService.findByName(nameToFind);
-        for (int i = 0; i < customersByName.size(); i++) {
-            System.out.println(customersByName.get(i).toString());
-
-        }
+        List<Customer> customersByName = new ArrayList<>();
+//        System.out.println("Input Name: ");
+//        String nameToFind = input.nextLine();
+        customersByName = customerService.findByName("A");
+        display(customersByName);
     }
 }

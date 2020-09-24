@@ -13,8 +13,11 @@ public class CustomerService implements IService<Customer> {
     static {
         customers = new ArrayList<>();
         customers.add(new Customer(1L, "The Anh", "Ha Noi"));
-        customers.add(new Customer(2L, "Quan", "Ha Noi"));
+        customers.add(new Customer(2L, "A", "Ha Noi"));
         customers.add(new Customer(3L, "Khanh", "Ha Noi"));
+        customers.add(new Customer(4L, "A", "Bac Giang"));
+        customers.add(new Customer(5L, "A", "Hung Yen"));
+
     }
 
     @Override
@@ -65,8 +68,6 @@ public class CustomerService implements IService<Customer> {
         for (int i = 0; i < customers.size(); i++) {
             if (name == customers.get(i).getName()) {
                 customerList.add(customers.get(i));
-            } else {
-                return null;
             }
         }
         return customerList;
