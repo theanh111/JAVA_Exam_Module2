@@ -13,10 +13,10 @@ public class CustomerService implements IService<Customer> {
     static {
         customers = new ArrayList<>();
         customers.add(new Customer(1L, "The Anh", "Ha Noi"));
-        customers.add(new Customer(2L, "A", "Ha Noi"));
+        customers.add(new Customer(2L, "The", "Ha Noi"));
         customers.add(new Customer(3L, "Khanh", "Ha Noi"));
-        customers.add(new Customer(4L, "A", "Bac Giang"));
-        customers.add(new Customer(5L, "A", "Hung Yen"));
+        customers.add(new Customer(4L, "The", "Bac Giang"));
+        customers.add(new Customer(5L, "The", "Hung Yen"));
 
     }
 
