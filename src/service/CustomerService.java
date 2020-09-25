@@ -65,9 +65,17 @@ public class CustomerService implements IService<Customer> {
     @Override
     public List<Customer> findByName(String name) {
         List<Customer> customerList = new ArrayList<>();
-        for (int i = 0; i < customers.size(); i++) {
-            if (name == customers.get(i).getName()) {
-                customerList.add(customers.get(i));
+
+        // // Tại sao for i và dùng == thì khi input.next() lại không nhận?
+//        for (int i = 0; i < customers.size(); i++) {
+//            if (name == customers.get(i).getName()) {
+//                customerList.add(customers.get(i));
+//            }
+//        }
+
+        for (Customer customer : customers) {
+            if (name.equals(customer.getName())) {
+                customerList.add(customer);
             }
         }
         return customerList;
